@@ -1,0 +1,14 @@
+package edu.oakland.helper;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class TextFieldMaker extends JTextField{
+
+	private JTextField example;
+	
+	//constructor
+	public TextFieldMaker(){
+	    example = new JTextField(10);
+	}
+}
