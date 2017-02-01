@@ -1,0 +1,20 @@
+package edu.oakland.helper;
+
+import java.awt.*;
+import javax.swing.*;
+
+public class LabelBuilderCS {
+
+	private JLabel labelExampleName;
+
+	public LabelBuilder() {
+		labelExampleName = new JLabel("Seen on Gui");
+	
+		labelExampleName.setBackground(Color.GREEN);
+		labelExampleName.setOpaque(true);
+	}
+
+	public JLabel getLabelEaxampleName() {
+		return labelExampleName;
+	}
+}
