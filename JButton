@@ -1,0 +1,18 @@
+package edu.oakland.helper;
+
+import java.awt.*;
+import javax.swing.*;
+
+public class ButtonBuilder {
+
+	private JButton buttonExample;
+
+	public ButtonBuilder() {
+
+		buttonExample = new JButton("Seen by user");
+	}
+
+	public JButton getExample() {
+		return buttonEnterBalance;
+	}
+}
