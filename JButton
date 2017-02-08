@@ -5,14 +5,28 @@ import javax.swing.*;
 
 public class ButtonBuilder {
 
-	private JButton buttonExample;
+    //Start Menu Button variables
+    private JButton easyButton;
+    private JButton intermediateButton;
+    private JButton hardButton;
+	
+    public ButtonBuilder() {
+        //Create Start Menu Buttons
+	easyButton = new JButton("Easy");
+	intermediateButton = new JButton("Intermediate");
+	hardButton = new JButton("Hard");
+    }
+    
+    //Pass Start Menu Buttons
+    public JButton getEasyButton() {
+	return easyButton;
+    }
 
-	public ButtonBuilder() {
-
-		buttonExample = new JButton("Seen by user");
-	}
-
-	public JButton getExample() {
-		return buttonEnterBalance;
-	}
+    public JButton getIntermediateButton() {
+        return intermediateButton;
+    }
+ 	
+    public JButton getHardButton() {
+ 	return hardButton;
+    }
 }
