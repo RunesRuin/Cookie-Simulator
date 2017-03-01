@@ -1,0 +1,31 @@
+import java.awt.event.*;
+import javax.swing.*;
+import sun.audio.*;
+import java.io.*;
+
+public class Sound {
+
+    public static void main(String[] args){
+        JFrame frame = new JFrame();
+        frame.setSize(200,200);
+        JButton button = new JButton ("Click to play");
+        frame.add(button);
+        button.addActionListener(new AL());
+        frame.show(true);
+    }
+    public static class AL implements ActionListener{
+        public final void actionPerformed(ActionEvent e){
+            music();
+        }
+    }
+    public static void music(){
+        AudioPlayer MPG = AudioPlayer.player;
+
+        try{
+        AudioStream BGM = new AudioStream(new FileInputStream("filename.wav"));
+        AudioData MD = BGM.getData();
+        ContinuousAudioDataStream loop = new ContinuousAudioDataStream(MD);
+        }catch(IOException error){}
+        MPG.start(loop);
+    }
+}
